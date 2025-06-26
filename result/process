@@ -1,72 +1,83 @@
 1. Project Setup
-📁 Folder Structure
+Folder Structure
+
 Frontend: React (stayfinder-frontend)
 
 Backend: Node.js/Express (stayfinder-backend)
 
 Database: MongoDB
 
-⚙️ Initialize Projects
-npx create-react-app stayfinder-frontend
+Initialization
 
-npm init -y in stayfinder-backend
+Ran npx create-react-app stayfinder-frontend
 
-Installed packages:
+Ran npm init -y in stayfinder-backend
+
+Installed Packages
 
 Frontend: react-router-dom, tailwindcss, etc.
 
 Backend: express, mongoose, cors, dotenv, bcrypt, jsonwebtoken, nodemon
 
-✅ 2. Backend Setup (stayfinder-backend)
-📌 Models (MongoDB + Mongoose)
-User.js – for registration/login
+2. Backend Setup (stayfinder-backend)
+Models (using Mongoose)
 
-Listing.js – for storing listing details
+User.js – handles user registration and login
 
-Booking.js – for booking data
+Listing.js – stores listing details
 
-📌 Auth Routes
-POST /api/auth/register ✅
+Booking.js – handles booking data
 
-POST /api/auth/login ✅
+Authentication Routes
 
-JWT-based auth (authMiddleware.js) ✅
+POST /api/auth/register – user registration
 
-📌 Listings Routes
-GET /api/listings – all listings ✅
+POST /api/auth/login – user login
 
-GET /api/listings/:id – single listing by ID ✅
+Implemented JWT-based authentication using authMiddleware.js
 
-POST /api/listings – create a listing ✅
+Listings Routes
 
-PUT /api/listings/:id – update a listing ✅
+GET /api/listings – fetch all listings
 
-DELETE /api/listings/:id – delete listing ✅
+GET /api/listings/:id – fetch a listing by ID
 
-📌 Bookings Routes
-POST /api/bookings – make a reservation ✅
+POST /api/listings – create a new listing
 
-Included date conflict validation ✅
+PUT /api/listings/:id – update a listing
 
-✅ 3. Frontend Setup (stayfinder-frontend)
-🧱 Pages & Components
-Home.js – show all listings with search & filters ✅
+DELETE /api/listings/:id – delete a listing
 
-ListingDetails.js – shows listing info & booking form ✅
+Bookings Routes
 
-Login.js and Register.js – authentication forms ✅
+POST /api/bookings – create a reservation
 
-Navbar.js – navigation bar with links ✅
+Implemented date conflict validation to prevent overlapping bookings
 
-HostDashboard.js – shows user-created listings ✅
+3. Frontend Setup (stayfinder-frontend)
+Pages and Components
 
-🧩 Features Implemented
-🔍 Search with filters: location & price ✅
+Home.js – displays all listings with search and filters
 
-🔒 Login/Register with JWT ✅
+ListingDetails.js – displays full listing information and booking form
 
-✅ Conditional rendering (buttons/links for logged-in users)
+Login.js and Register.js – forms for authentication
 
-📅 Booking UI: date range form & booking submission ✅
+Navbar.js – navigation menu with links
 
-✅ 4. Optional Features (Bonus)
+HostDashboard.js – shows listings created by the logged-in user
+
+Features Implemented
+
+Search with filters (location and price)
+
+Login and Register with JWT
+
+Conditional rendering based on user authentication
+
+Booking form with date selection and booking submission
+
+4. Optional Features (Bonus)
+Started integrating Mapbox but later removed due to compatibility issues
+
+Stripe or mock payment integration was planned for future implementation
