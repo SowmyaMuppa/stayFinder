@@ -1,0 +1,72 @@
+1. Project Setup
+📁 Folder Structure
+Frontend: React (stayfinder-frontend)
+
+Backend: Node.js/Express (stayfinder-backend)
+
+Database: MongoDB
+
+⚙️ Initialize Projects
+npx create-react-app stayfinder-frontend
+
+npm init -y in stayfinder-backend
+
+Installed packages:
+
+Frontend: react-router-dom, tailwindcss, etc.
+
+Backend: express, mongoose, cors, dotenv, bcrypt, jsonwebtoken, nodemon
+
+✅ 2. Backend Setup (stayfinder-backend)
+📌 Models (MongoDB + Mongoose)
+User.js – for registration/login
+
+Listing.js – for storing listing details
+
+Booking.js – for booking data
+
+📌 Auth Routes
+POST /api/auth/register ✅
+
+POST /api/auth/login ✅
+
+JWT-based auth (authMiddleware.js) ✅
+
+📌 Listings Routes
+GET /api/listings – all listings ✅
+
+GET /api/listings/:id – single listing by ID ✅
+
+POST /api/listings – create a listing ✅
+
+PUT /api/listings/:id – update a listing ✅
+
+DELETE /api/listings/:id – delete listing ✅
+
+📌 Bookings Routes
+POST /api/bookings – make a reservation ✅
+
+Included date conflict validation ✅
+
+✅ 3. Frontend Setup (stayfinder-frontend)
+🧱 Pages & Components
+Home.js – show all listings with search & filters ✅
+
+ListingDetails.js – shows listing info & booking form ✅
+
+Login.js and Register.js – authentication forms ✅
+
+Navbar.js – navigation bar with links ✅
+
+HostDashboard.js – shows user-created listings ✅
+
+🧩 Features Implemented
+🔍 Search with filters: location & price ✅
+
+🔒 Login/Register with JWT ✅
+
+✅ Conditional rendering (buttons/links for logged-in users)
+
+📅 Booking UI: date range form & booking submission ✅
+
+✅ 4. Optional Features (Bonus)
